@@ -32,19 +32,19 @@ body {
 }
 
 #info {
-    height: 30vh;
+    height: 25vh;
     width: 100%;
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 10;
+    z-index: 4;
     padding-top: 20px;
 }
 
 #star {
     position: absolute;
-    left: -10%;
-    top: 10%;
+    left: -20%;
+    top: 5%;
     width: 300px; /* Specific size instead of scale */
     height: 300px;
     animation: spin-animation 15s linear infinite;
@@ -53,7 +53,8 @@ body {
 }
 
 #data {
-    margin-left: 10%;
+    margin-left: 15%;
+    margin-top: 40%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -71,7 +72,7 @@ body {
 #nameField {
     padding: 5px 20px;
     border-radius: 15px;
-    font-size: 2rem; /* Uses rem for stability */
+    font-size: 1.23rem; /* Uses rem for stability */
     font-family: "Amatic SC", sans-serif;
     font-weight: 700;
 }
@@ -79,7 +80,7 @@ body {
 #name {
     padding: 10px 25px;
     border-radius: 20px;
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: "DM Serif Display", serif;
 }
 
@@ -90,11 +91,12 @@ body {
 }
 
 #self-img {
-    height: 60%;
+    height: 50%;
     width: auto;
     position: absolute;
     right: 0;
     top: 0;
+    filter: drop-shadow(0 0 0.15rem rgb(90, 90, 90));
     z-index: 5;
     animation: wiggle 6s ease-in-out infinite;
 }
@@ -104,14 +106,14 @@ body {
     border: 2px solid black;
     animation: shadow-move 3s linear infinite;
     width: 70%;
-    padding: 20px;
+    padding: 5px 10px 10px 5px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     position: absolute;
-    bottom: 5%;
+    bottom: 20%;
     left: 5%;
-    z-index: 11;
+    z-index: 6;
 }
 
 #details p {
