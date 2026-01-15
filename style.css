@@ -1,240 +1,108 @@
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- BASE ---------- */
 body {
-    margin: 0;
-    padding: 0;
-    background-image: linear-gradient(to right, #80808012 10px, transparent 10px),
-        linear-gradient(to bottom, #80808012 10px, transparent 10px);
-    background-size: 100px 100px;
-    display: flex;
-    flex-direction: column;
+  font-family: system-ui, sans-serif;
+  background:
+    linear-gradient(to right, #00000010 1px, transparent 1px),
+    linear-gradient(to bottom, #00000010 1px, transparent 1px);
+  background-size: 32px 32px;
+  overflow-x: hidden;
 }
 
-/* 1. Define the Keyframes */
-@keyframes spin-animation {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+.page {
+  min-height: 100svh;
+  position: relative;
+  padding: 1rem;
 }
 
-@keyframes shadow-move {
-    0% {
-        box-shadow: 0px 0px 0px rgb(0, 0, 0);
-    }
-
-    40% {
-        box-shadow: 40px 20px 0px rgb(0, 0, 0);
-    }
-
-    60% {
-        box-shadow: 40px 20px 0px rgb(0, 0, 0);
-    }
-
-    80% {
-        box-shadow: 0px 0px 0px rgb(0, 0, 0);
-    }
-
-    100% {
-        box-shadow: 0px 0px 0px rgb(0, 0, 0);
-    }
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  padding-top: 2.5rem;
+  min-height: 60svh;
 }
 
-@keyframes glow {
-    0% {
-        height: 100vw;
-    }
-
-    20% {
-        height: 125vw;
-    }
-
-    40% {
-        height: 150vw;
-    }
-
-    60% {
-        height: 150vw;
-    }
-
-    80% {
-        height: 125vw;
-    }
-
-    100% {
-        height: 100vw;
-    }
+.name-box {
+  position: relative;
+  z-index: 3;
 }
 
-@keyframes wiggle {
-    0% {
-        transform: rotate(0deg) translateX(30%);
-    }
-
-    25% {
-        transform: rotate(3deg) translateX(30%);
-    }
-
-    50% {
-        transform: rotate(0deg) translateX(30%);
-    }
-
-    75% {
-        transform: rotate(-3deg) translateX(30%);
-    }
-
-    100% {
-        transform: rotate(0deg) translateX(30%);
-    }
+.hi {
+  display: inline-block;
+  font-family: "Amatic SC", cursive;
+  font-size: 1.3rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1.5px solid #fff;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.4);
 }
 
-#page1 {
-    /* background-color: rgb(198, 72, 72); */
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
+.name {
+  margin-top: 0.6rem;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2.4rem, 9vw, 3.2rem);
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  border: 2px solid #fff;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.4);
+  width: fit-content;
 }
 
-#info {
-    /* background-color: rgba(255, 0, 212, 0.437); */
-    height: 25vh;
-    width: 100vw;
-    margin: 0;
-    transform: translateY(20%);
-    isolation: isolate;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 5;
+/* ---------- PORTRAIT ---------- */
+.portrait {
+  position: absolute;
+  right: -12%;
+  bottom: -1rem;
+  height: 48svh;
+  max-height: 420px;
+  object-fit: contain;
+  z-index: 2;
 }
 
-#star {
-    margin-left: 5%;
-    /* background-color: aliceblue; */
-    height: 10%;
-    aspect-ratio: 1;
-    scale: 12;
-    transform: translateZ(0);
-    animation: spin-animation 10s linear infinite;
+/* ---------- ABOUT CARD ---------- */
+.about-card {
+  position: relative;
+  z-index: 4;
+  margin-top: 2.5rem;
+  background: #f7f7f7;
+  border: 4px solid #000;
+  padding: 1.2rem;
+  font-family: "Amatic SC", cursive;
+  font-size: clamp(1rem, 4.5vw, 1.25rem);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 10px 10px 0 #000;
 }
 
-#data {
-    /* background-color: rgba(0, 255, 255, 0.633); */
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30vh;
+/* ---------- GLOWS ---------- */
+.glow {
+  position: absolute;
+  width: 120vw;
+  height: 120vw;
+  border-radius: 50%;
+  filter: blur(200px);
+  z-index: 1;
+  pointer-events: none;
 }
 
-#data p {
-    width: fit-content;
-    margin: 0;
-    background-color: rgba(251, 251, 251, 0);
-    border: 2px solid rgb(255, 255, 255);
-    color: rgb(4, 43, 47);
-    display: inline-block;
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
-    /* Support for Safari */
-    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+.glow-yellow {
+  background: #f0ff00;
+  top: -30%;
+  left: -70%;
 }
 
-#nameField {
-    padding: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
-    border-radius: 25px;
-    font-size: 500%;
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-#name {
-    padding: 2%;
-    padding-left: 10%;
-    padding-right: 10%;
-    border-radius: 50px;
-    font-size: 1000%;
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-#intro {
-    width: 100vw;
-    height: 50vh;
-    /* background-color: red; */
-    position: relative;
-}
-
-#details {
-    background-color: white;
-    background-image: url(noise.svg);
-    border: 10px solid black;
-    animation: shadow-move 2s linear infinite;
-    width: 75%;
-    height: auto;
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    bottom: 0;
-    transform: translate(2%, 50%);
-    position: absolute;
-    z-index: 6;
-}
-
-#details p {
-    margin: 0;
-    /* background-color: rgb(0, 140, 255); */
-    font-size: 300%;
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-#details :nth-child(3) {
-    margin-bottom: 60px;
-}
-
-#self-img {
-    height: 50vh;
-    aspect-ratio: 1536/1024;
-    position: absolute;
-    right: 0;
-    transform: translateX(30%);
-    z-index: 4;
-    animation: wiggle 5s ease-in-out infinite;
-}
-
-#yellow-gradient {
-    filter: blur(600px);
-    height: 150vw;
-    border-radius: 100%;
-    aspect-ratio: 1;
-    background-color: #EAFF00;
-    position: absolute;
-    left: -90%;
-    top: -40%;
-    animation: glow 5s linear infinite;
-    mix-blend-mode: multiply;
-    z-index: 1;
-}
-
-#blue-gradient {
-    filter: blur(600px);
-    height: 150vw;
-    border-radius: 100%;
-    aspect-ratio: 1;
-    background-color: #00FBFF;
-    position: absolute;
-    right: -100%;
-    bottom: 0%;
-    animation: glow 5s linear infinite;
-    mix-blend-mode: multiply;
-    z-index: 2;
+.glow-blue {
+  background: #00eaff;
+  bottom: -40%;
+  right: -70%;
 }
