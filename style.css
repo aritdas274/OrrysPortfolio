@@ -61,17 +61,17 @@ body {
 
 #data p {
     margin: 0;
-    border: 1.5px solid #fff;
+    border: 0.5px solid #fff;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.111);
     width: fit-content;
 }
 
 #nameField {
     padding: 5px 20px;
     border-radius: 15px;
-    font-size: 2.5rem; /* Uses rem for stability */
+    font-size: 2rem; /* Uses rem for stability */
     font-family: "Amatic SC", sans-serif;
     font-weight: 700;
 }
@@ -79,7 +79,7 @@ body {
 #name {
     padding: 10px 25px;
     border-radius: 20px;
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: "DM Serif Display", serif;
 }
 
@@ -101,22 +101,22 @@ body {
 
 #details {
     background-color: #f0f0f0;
-    border: 5px solid black;
+    border: 2px solid black;
     animation: shadow-move 3s linear infinite;
-    width: 85%;
+    width: 70%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     left: 5%;
     z-index: 11;
 }
 
 #details p {
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 1rem;
     line-height: 1.2;
     font-family: "Amatic SC", sans-serif;
     font-weight: 700;
