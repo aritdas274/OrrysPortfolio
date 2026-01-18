@@ -12,6 +12,13 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+#main {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
 /* Animations */
 
 /* The typing effect */
@@ -79,9 +86,12 @@ body {
     75% { transform: rotate(-3deg) translateX(20%); }
 }
 
+/* PAGE1 STARTS HERE */
+
 #page1 {
+    /* background-color: rgba(255, 0, 0, 0.251); */
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     position: relative;
     overflow: hidden;
 }
@@ -137,12 +147,14 @@ body {
 }
 
 #name {
+    color: #a96a38;
     overflow: hidden;
     padding: 10px 25px;
     border-radius: 20px;
     animation: typing 3.5s steps(40, end);
     font-size: 2rem;
     font-family: "DM Serif Display", serif;
+    mix-blend-mode: difference;
 }
 
 #intro {
@@ -207,7 +219,147 @@ body {
 
 #blue-gradient {
     background-color: #00FBFF;
-    bottom: -10%;
+    bottom: 10%;
     right: -20%;
     z-index: 2;
+}
+
+/* PAGE2 STARTS HERE */
+#page2 {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+#thingsIdo {
+    margin: 0;
+    border: 0.5px solid #fff;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.207);
+    width: fit-content;
+    padding: 20px 50px;
+    position: absolute;
+    top: 0.1%;
+    right: 5%;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 auto;
+    white-space: nowrap;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.537));
+    font-size: 2.1rem;
+    /* Uses rem for stability */
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    z-index: 8;
+}
+
+.box {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#bg {
+    /* background-color: rgba(204, 47, 47, 0.807); */
+    background-image: url("https://i.ibb.co/Xkr7B06b/paper.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(18.53deg) scale(1.2);
+    filter: drop-shadow(0 0 5rem crimson);
+    z-index: 7;
+}
+
+#table {
+    /* background-color: rgba(83, 214, 254, 0.653); */
+    z-index: 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#grid {
+    /* background-color: rgba(255, 0, 0, 0.525); */
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.gridBox {
+    /* background-color: green; */
+    border-radius: 50px;
+    position: relative;
+    margin: 5%;
+}
+
+.topic {
+    background-color: rgba(0, 0, 0, 0.637);
+    backdrop-filter: blur(15px);
+    height: fit-content;
+    width: fit-content;
+    padding-left: 2%;
+    line-height: 5rem;
+    margin: 0%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.topicDetail {
+    font-family: "DM Serif Display", serif;
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1;
+    font-size: 0.6rem;
+    padding: 10%;
+    text-align: justify;
+    color: whitesmoke;
+}
+
+#graphicDesign {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    height: fit-content;
+    width: fit-content;
+    background: linear-gradient(to bottom right, #D7BA44, #ffffff);
+    /* 2. Clip the background to the text */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Make the actual text transparent */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    /* Fallback */
+}
+
+#motionGraphics {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    height: fit-content;
+    width: fit-content;
+    background: linear-gradient(to bottom right, #D74469, #ffffff);
+    /* 2. Clip the background to the text */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 3. Make the actual text transparent */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    /* Fallback */
+}
+
+.down{
+    position: absolute;
+    bottom: 10%;
 }
