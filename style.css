@@ -363,3 +363,193 @@ body {
     position: absolute;
     bottom: 10%;
 }
+
+/* PAGE3 STARTS HERE */
+
+#page3 {
+        width: 100%;
+    min-height: 90vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#tools {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 20/10;
+  /* background-color: green; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#layer1 {
+  position: absolute;
+  transform: translate(2.5%, 2.5%);
+  width: 80%;
+  max-width: 600px;
+  aspect-ratio: 20/10;
+  /* background-color: rgb(255, 0, 225); */
+}
+
+#layer2 {
+  position: absolute;
+  transform: translate(-2.5%, -2.5%);
+  width: 80%;
+  max-width: 600px;
+  aspect-ratio: 20/10;
+  /* background-color: blue; */
+}
+
+.toolText {
+  font-family: Anton;
+  font-size: 1rem;
+}
+
+#layer1 p {
+  opacity: 0%;
+}
+
+.shapeContainer {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 20/10;
+  /* background-color: red; */
+  position: relative;
+}
+
+.toolHeading {
+  height: fit-content;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 10px 20px 10px 20px;
+}
+
+.card {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  /* Now it can be any size! */
+  max-width: 600px;
+  aspect-ratio: 16/9;
+
+  display: grid;
+  gap: px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+
+  /* Link to the SVG clipPath ID above */
+  clip-path: url(#subtractedShape);
+}
+
+.tools {
+  /* background-color: blue; */
+  height: 70%;
+  aspect-ratio: 1;
+}
+
+#lr {
+  background-image: url(https://i.ibb.co/0Rwsm7Lp/lr.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  grid-column: 3;
+  /* Starts at line 2, ends at 3 */
+  grid-row: 1;
+  /* Starts at line 3, ends at 4 */
+}
+
+#illustrator {
+  background-image: url(https://i.ibb.co/gbc4mtX0/ai.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  grid-column: 4;
+  /* Starts at line 2, ends at 3 */
+  grid-row: 1;
+  /* Starts at line 3, ends at 4 */
+}
+
+#blender {
+  background-image: url(https://i.ibb.co/GfHWkhxc/blender-icon.png);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 5;
+  /* Starts at line 2, ends at 3 */
+  grid-row: 1;
+  /* Starts at line 3, ends at 4 */
+}
+
+#ae {
+  background-image: url(https://i.ibb.co/990vbrLt/adobe-after-effects-icon.png);
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 1;
+  /* Starts at line 2, ends at 3 */
+  grid-row: 2;
+  /* Starts at line 3, ends at 4 */
+}
+
+#pr {
+  background-image: url(https://i.ibb.co/1Y5qbJDW/pr.png);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 2;
+  /* Starts at line 2, ends at 3 */
+  grid-row: 2;
+  /* Starts at line 3, ends at 4 */
+}
+
+#figma {
+  background-image: url(https://i.ibb.co/21xkRQGB/figma.png);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 3;
+  /* Starts at line 2, ends at 3 */
+  grid-row: 2;
+  /* Starts at line 3, ends at 4 */
+}
+
+#ps {
+  background-image: url(https://i.ibb.co/DHRfJSSs/ps.png);
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 4;
+  /* Starts at line 2, ends at 3 */
+  grid-row: 2;
+  /* Starts at line 3, ends at 4 */
+}
+
+#ai {
+  background-image: url(https://i.ibb.co/ZRTkkK8c/Gen-AI.png);
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 5;
+  /* Starts at line 2, ends at 3 */
+  grid-row: 2;
+  /* Starts at line 3, ends at 4 */
+}
+
+.topLayer {
+  background-color: #ffffff63;
+  backdrop-filter: blur(10px);
+}
+
+.bottomLayer {
+  background-color: #e6c342;
+  filter: drop-shadow(0px 0px 20px #e6c342);
+}
