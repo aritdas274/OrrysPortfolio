@@ -86,6 +86,17 @@ body {
     75% { transform: rotate(-3deg) translateX(20%); }
 }
 
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal-on-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* PAGE1 STARTS HERE */
 
 #page1 {
@@ -553,4 +564,3 @@ body {
   background-color: #e6c342;
   filter: drop-shadow(0px 0px 30px #e6c342);
 }
-
