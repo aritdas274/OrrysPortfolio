@@ -11,3 +11,13 @@ const observer = new IntersectionObserver((entries) => {
 
 // Grab all elements with the class and watch them
 document.querySelectorAll('.reveal-on-scroll').forEach((el) => observer.observe(el));
+
+
+
+// toggle theme
+const toggleBtn = document.getElementById("themeToggle");
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
+
