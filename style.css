@@ -827,6 +827,7 @@ body.dark {
 #workHorizontal {
     width: 100%;
     aspect-ratio: 1021/1341;
+    margin-top: 10vh;
     /* overflow: hidden; */
     /* background-color: red; */
     display: flex;
@@ -940,4 +941,5 @@ height: 100%;
     position: absolute;
     background-color: #00ffc3;
     filter: blur(200px);
+
 }
