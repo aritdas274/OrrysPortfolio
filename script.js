@@ -81,3 +81,13 @@ resetTimer();
 
 // Adjust position if user resizes window
 window.addEventListener('resize', updateSlider);
+
+// js to calculate the height of the work section 
+
+const divA = document.querySelector('#potrait').offsetHeight;
+const divB = document.querySelector('#landscape').offsetHeight;
+const divC = document.querySelector('#square').offsetHeight;
+const divD = document.querySelector('#square').offsetHeight;
+const target = document.querySelector('.torn-paper-div');
+
+target.style.height = (divA + divB + divC + divD) + 'px';

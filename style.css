@@ -13,6 +13,7 @@ body {
     background-color: white;
     transition: background-color 0.4s ease, color 0.4s ease;
     overflow-x: hidden;
+    position: relative;
     /* Prevent horizontal scrolling */
 }
 
@@ -129,6 +130,52 @@ body.dark {
     75% {
         transform: rotate(-3deg) translateX(20%);
     }
+}
+
+#navbar {
+    width: 90vw;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.615);
+    border: 1px solid white;
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    position: fixed;
+    bottom: 1%;
+    left: 0%;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 101;
+    mix-blend-mode: difference;
+    transition:     all 0.4s ease;
+}
+
+#select {
+    height: 70%;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    border-radius: 50px;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    background-color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+}
+
+
+
+#navbar p {
+    color: white;
+    text-align: center;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    height: 100%;
+    width: 50%;
+    border-radius: 100px;
+    /* background-color: #00878a; */
 }
 
 #theme-switch {
@@ -885,7 +932,7 @@ body.dark {
     width: fit-content;
     display: flex;
     /* FIX: Hide the scrollbar so JS controls the movement exclusively */
-    overflow-x: hidden; 
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -895,7 +942,7 @@ body.dark {
 }
 
 #buttonContainer {
-width: 100%;
+    width: 100%;
     height: 5vh;
     position: absolute;
     bottom: 5%;
@@ -917,7 +964,7 @@ width: 100%;
 
 
 .arrow {
-height: 100%;
+    height: 100%;
     aspect-ratio: 1;
     position: absolute;
     /* FIX: Ensure the mouse knows this is an interactive element */
@@ -952,50 +999,51 @@ height: 100%;
 }
 
 .torn-paper-div {
-  /* 1. Dimensions */
-  width: 100%;
-  height: 300vh; /* Adjust this value whenever you need to change height */
-  
-  /* 2. Your Gradient Background */
-  background: linear-gradient(to bottom, #071E1E, #231214, #1E0F29);
+    /* 1. Dimensions */
+    width: 100%;
+    height: 300vh;
+    /* Adjust this value whenever you need to change height */
 
-  /* 3. The Masking Logic */
-  /* We use paper2.png for the top and a solid black block for the body */
-  -webkit-mask-image: 
-    url('https://i.ibb.co/fdG6SZDd/paper2.png'), 
-    linear-gradient(black, black);
-  mask-image: 
-    url('https://i.ibb.co/fdG6SZDd/paper2.png'), 
-    linear-gradient(black, black);
+    /* 2. Your Gradient Background */
+    background: linear-gradient(to bottom, #071E1E, #231214, #1E0F29);
 
-  /* Keep the PNG at the top and the solid fill at the bottom */
-  -webkit-mask-position: top center, bottom center;
-  mask-position: top center, bottom center;
+    /* 3. The Masking Logic */
+    /* We use paper2.png for the top and a solid black block for the body */
+    -webkit-mask-image:
+        url('https://i.ibb.co/fdG6SZDd/paper2.png'),
+        linear-gradient(black, black);
+    mask-image:
+        url('https://i.ibb.co/fdG6SZDd/paper2.png'),
+        linear-gradient(black, black);
 
-  /* SIZING */
-  /* - Set the PNG to cover 100% width and a fixed height (e.g., 60px) */
-  /* - Set the solid block to fill the remaining area with a 2px overlap */
-  -webkit-mask-size: 100% 60px, 100% calc(100% - 58px);
-  mask-size: 100% 160px, 100% calc(100% - 58px);
+    /* Keep the PNG at the top and the solid fill at the bottom */
+    -webkit-mask-position: top center, bottom center;
+    mask-position: top center, bottom center;
 
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+    /* SIZING */
+    /* - Set the PNG to cover 100% width and a fixed height (e.g., 60px) */
+    /* - Set the solid block to fill the remaining area with a 2px overlap */
+    -webkit-mask-size: 100% 60px, 100% calc(100% - 58px);
+    mask-size: 100% 160px, 100% calc(100% - 58px);
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
     position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #workContainer {
     width: 90%;
-    height: 90%;
+    height: fit-content;
     position: absolute;
     top: 2em;
     /* background-color: red; */
 }
 
 .workIMG {
-        border-radius: 20px;
+    border-radius: 20px;
     border: 2px solid white;
 }
 
@@ -1003,45 +1051,59 @@ height: 100%;
     margin-top: 1em;
 }
 
-#sec1 {
+#potrait {
     width: 100%;
     height: fit-content;
     /* background-color: blue; */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1em; 
+    gap: 1em;
 }
 
-#sec1 img {
+#potrait img {
     width: 100%;
     aspect-ratio: 210/297;
 }
 
-#sec2 {
+#landscape {
     width: 100%;
     height: fit-content;
     /* background-color: rgb(0, 255, 106); */
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1em; 
+    gap: 1em;
 }
 
-#sec2 img {
+#landscape img {
     width: 100%;
 }
 
-#sec2:nth-child(1) {
+#landscape:nth-child(1) {
     aspect-ratio: 3840/2160;
 }
 
-#sec2:nth-child(2) {
+#landscape:nth-child(2) {
     aspect-ratio: 4800/3392;
 }
 
-#sec2:nth-child(3) {
+#landscape:nth-child(3) {
     aspect-ratio: 2405/1796;
 }
 
-#sec2:nth-child(4) {
+#landscape:nth-child(4) {
     aspect-ratio: 3640/2276;
+}
+
+#square {
+    width: 100%;
+    height: fit-content;
+    /* background-color: blue; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+#square img {
+    width: 100%;
+    aspect-ratio: 1;
 }
