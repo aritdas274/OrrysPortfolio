@@ -13,6 +13,30 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal-on-scroll').forEach((el) => observer.observe(el));
 
 
+// artist toggle here
+const slider = document.getElementById('select');
+
+function gd() {
+    // 1. Move the slider
+    slider.style.transition = "all 0.4s ease";
+    slider.style.left = "0%";
+
+    // 2. Redirect after a tiny delay (to let the animation finish)
+    // setTimeout(() => {
+    //     window.location.href = "graphic-designer.html"; // Replace with your URL
+    // }, 300); 
+}
+
+function dop() {
+    // 1. Move the slider
+    slider.style.transition = "all 0.4s ease";
+    slider.style.left = "45%";
+
+    // 2. Redirect after a tiny delay
+    // setTimeout(() => {
+    //     window.location.href = "https://www.instagram.com/bitann_films/"; // Replace with your URL
+    // }, 300);
+}
 
 // toggle theme
 const toggleBtn = document.getElementById("themeToggle");
