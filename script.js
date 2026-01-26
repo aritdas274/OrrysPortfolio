@@ -1,13 +1,20 @@
+const options = {
+  // rootMargin: 'top right bottom left'
+  // -40% from the bottom means the trigger is 40% up from the bottom
+  // To trigger when it hits 40% from the TOP, use -60% bottom margin
+  rootMargin: '0px 0px -20% 0px',
+  threshold: 0 
+};
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
-    }
-    else{
-        entry.target.classList.remove('show');
+    } else {
+      entry.target.classList.remove('show');
     }
   });
-});
+}, options);
 
 // Grab all elements with the class and watch them
 document.querySelectorAll('.reveal-on-scroll').forEach((el) => observer.observe(el));
@@ -33,9 +40,9 @@ function dop() {
     slider.style.left = "45%";
 
     // 2. Redirect after a tiny delay
-    // setTimeout(() => {
-    //     window.location.href = "https://www.instagram.com/bitann_films/"; // Replace with your URL
-    // }, 300);
+    setTimeout(() => {
+        window.location.href = "https://www.instagram.com/bitann_films/"; // Replace with your URL
+    }, 300);
 }
 
 // toggle theme

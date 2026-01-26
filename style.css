@@ -149,7 +149,7 @@ body.dark {
     justify-content: space-evenly;
     z-index: 101;
     mix-blend-mode: difference;
-    transition:     all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
 #select {
@@ -175,7 +175,56 @@ body.dark {
     height: 100%;
     width: 50%;
     border-radius: 100px;
+    font-size: 0.7em;
     /* background-color: #00878a; */
+}
+
+#contactButton {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    position: fixed;
+    width: fit-content;
+    height: 10vw;
+    border-radius: 50px;
+    position: fixed;
+    right: 5vw;
+    bottom: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 102;
+    padding: 1%;
+    mix-blend-mode: difference;
+}
+
+#contactIcon {
+    height: 100%;
+    aspect-ratio: 1;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactIcon svg {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+#contactButton p {
+    color: white;
+    text-align: center;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    height: 100%;
+    width: 50%;
+    text-align: left;
+    border-radius: 100px;
+    font-size: 0.7em;
+    mix-blend-mode: difference;
 }
 
 #theme-switch {
@@ -490,6 +539,8 @@ body.dark {
     z-index: 5;
     animation: wiggle 6s ease-in-out infinite;
 }
+
+
 
 #details {
     background-color: #f0f0f0;
