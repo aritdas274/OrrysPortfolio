@@ -1158,3 +1158,51 @@ body.dark {
     width: 100%;
     aspect-ratio: 1;
 }
+
+/* Page3 end here */
+
+#disclaimerPage {
+    width: 100%;
+    height: fit-content;
+    position: relative;  
+}
+
+#disclaimer {
+    height: fit-content;
+    width: 100vw;
+    padding: 5%;
+    /* border-radius: 20px; */
+    /* border: 2px solid rgb(15, 118, 149); */
+    background: linear-gradient(to bottom, #0f7070, #0d4062);
+    margin: auto;
+    padding-bottom: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+#disclaimerHeading {
+    margin: 0%;
+font-family: "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    font-size: 300%;
+    text-align: center;
+    background-color: #e4e4e4;
+    border-radius: 20px;
+}
+
+.disclaimerText {
+    font-family: "Space Mono", monospace;
+  font-weight: 200;
+  font-style: normal;
+  text-align: justify;
+  /* line-height: 100%; */
+  font-size: large;
+  background-color: #111111;
+    border-radius: 20px;
+    color: white;
+    padding: 5%;
+}
