@@ -1188,7 +1188,7 @@ font-family: "Bricolage Grotesque", sans-serif;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
-    font-size: 300%;
+    font-size: medium;
     text-align: center;
     background-color: #e4e4e4;
     border-radius: 20px;
@@ -1200,9 +1200,9 @@ font-family: "Bricolage Grotesque", sans-serif;
   font-style: normal;
   text-align: justify;
   /* line-height: 100%; */
-  font-size: large;
-  background-color: #111111;
+  font-size: small;
+  /* background-color: #111111; */
     border-radius: 20px;
     color: white;
-    padding: 5%;
+    /* padding: 5%; */
 }
