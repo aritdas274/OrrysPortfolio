@@ -270,6 +270,9 @@ body.dark {
     transform: scale(0.4);
     position: relative;
     right: -10%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* For older browsers */
 }
 
 .theme-switch {
@@ -1202,7 +1205,7 @@ body.dark {
 #disclaimerPage {
     width: 100%;
     height: fit-content;
-    position: relative;  
+    position: relative;
 }
 
 #disclaimer {
@@ -1220,12 +1223,12 @@ body.dark {
 
 #disclaimerHeading {
     margin: 0%;
-font-family: "Bricolage Grotesque", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
     font-size: medium;
     text-align: center;
     background-color: #e4e4e4;
@@ -1234,12 +1237,12 @@ font-family: "Bricolage Grotesque", sans-serif;
 
 .disclaimerText {
     font-family: "Space Mono", monospace;
-  font-weight: 200;
-  font-style: normal;
-  text-align: justify;
-  /* line-height: 100%; */
-  font-size: small;
-  /* background-color: #111111; */
+    font-weight: 200;
+    font-style: normal;
+    text-align: justify;
+    /* line-height: 100%; */
+    font-size: small;
+    /* background-color: #111111; */
     border-radius: 20px;
     color: white;
     /* padding: 5%; */
