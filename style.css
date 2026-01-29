@@ -15,6 +15,8 @@ body {
     overflow-x: hidden;
     position: relative;
     /* Prevent horizontal scrolling */
+    -webkit-user-select: none;
+  user-select: none;
 }
 
 body.dark {
@@ -133,6 +135,39 @@ body.dark {
 }
 
 
+@keyframes reveal {
+    0% {
+        width: 0%;
+        scale: 0;
+    }
+
+    20% {
+        scale: 1;
+    }
+
+    90% {
+        width: 82%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
 
 #navbar {
     width: 90vw;
@@ -245,8 +280,9 @@ body.dark {
 
 #topbarContainer {
     height: 3rem;
-    width: fit-content;
+    width: 80%;
     border-radius: 25px;
+    animation: reveal 2s ease-in forwards;
     backdrop-filter: blur(2px);
     /* border: 10px solid rgba(255, 255, 255, 0.795); */
     background: linear-gradient(to bottom right, hsla(182, 83%, 93%, 0.7), hsla(182, 55%, 62%, 0.7));
@@ -263,6 +299,7 @@ body.dark {
     position: relative;
     left: 0%;
     filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+    animation: fadeIn 3s ease-in forwards;
 }
 
 
@@ -273,6 +310,7 @@ body.dark {
     -webkit-tap-highlight-color: transparent;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     /* For older browsers */
+    animation: fadeIn 3s ease-in forwards;
 }
 
 .theme-switch {
@@ -1062,6 +1100,8 @@ body.dark {
     /* FIX: Ensure the mouse knows this is an interactive element */
     cursor: pointer;
     pointer-events: all;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);/* For older browsers */
 }
 
 #leftArrow {

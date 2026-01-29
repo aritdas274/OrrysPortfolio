@@ -19,6 +19,13 @@ const observer = new IntersectionObserver((entries) => {
 // Grab all elements with the class and watch them
 document.querySelectorAll('.reveal-on-scroll').forEach((el) => observer.observe(el));
 
+//vibration setup
+function handleButtonClick() {
+  // 1. Check if the browser supports vibration
+  if ("vibrate" in navigator) {
+    navigator.vibrate(70); // Quick 60ms vibration
+  }
+}
 
 // artist toggle here
 const slider = document.getElementById('select');
