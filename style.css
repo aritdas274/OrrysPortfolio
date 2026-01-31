@@ -168,6 +168,20 @@ body.dark {
     }
 }
 
+@keyframes fadeOut {
+    0% {
+        opacity: 100%;
+    }
+
+    80% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
 
 #navbar {
     width: 90vw;
@@ -262,6 +276,27 @@ body.dark {
     border-radius: 100px;
     font-size: 0.7em;
     mix-blend-mode: difference;
+}
+
+#cardPage {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000e3;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 98;
+    animation: fadeOut 5.2s ease-in forwards;
+}
+
+#card {
+    width: 100%;
+    aspect-ratio: 720/1120;
+    /* background-color: #00FBFF; */
 }
 
 #topbar {
@@ -556,7 +591,7 @@ body.dark {
     width: 300px;
     /* Specific size instead of scale */
     height: 300px;
-    animation: pop 4s ease-out forwards, spin-animation 15s linear infinite;
+    animation: pop 4s ease-out 4s forwards, spin-animation 15s linear 4s infinite;
     z-index: -1;
     opacity: 0.8;
 }
@@ -584,7 +619,7 @@ body.dark {
     overflow: hidden;
     margin: 0 auto;
     white-space: nowrap;
-    animation: typing 3.5s steps(40, end);
+    animation: typing 3.5s steps(40, end) 4s;
     font-size: 1.23rem;
     /* Uses rem for stability */
     font-family: "Amatic SC", sans-serif;
@@ -596,7 +631,7 @@ body.dark {
     overflow: hidden;
     padding: 10px 25px;
     border-radius: 20px;
-    animation: typing 3.5s steps(40, end);
+    animation: typing 3.5s steps(40, end) 4s;
     font-size: 2rem;
     font-family: "DM Serif Display", serif;
     mix-blend-mode: difference;
