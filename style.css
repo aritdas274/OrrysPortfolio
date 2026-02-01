@@ -1275,7 +1275,57 @@ body.dark {
     aspect-ratio: 1;
 }
 
-/* Page3 end here */
+/*Preview CSS*/
+/* Preview Overlay Background */
+#previewOverlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9); /* Deep black overlay */
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Preview Image */
+#previewImg {
+    max-width: 85vw;
+    max-height: 85vh;
+    border-radius: 8px;
+    object-fit: contain;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Close Button */
+#closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+#closeBtn:hover {
+    color: #ff4d4d; /* Red tint on hover for clarity */
+}
+
+/* Add a pointer cursor to gallery images */
+.sec img {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.sec img:hover {
+    opacity: 0.8;
+}
+
+/* Page4 end here */
 
 #disclaimerPage {
     width: 100%;
