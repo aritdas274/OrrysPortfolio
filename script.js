@@ -1,3 +1,15 @@
+//card animation remover
+// Wait for 5200 milliseconds (5.2 seconds)
+setTimeout(() => {
+  const element = document.getElementById('cardPage');
+  
+  // Check if the element exists to avoid errors
+  if (element) {
+    element.style.display = 'none';
+  }
+}, 5200);
+
+
 const options = {
   // rootMargin: 'top right bottom left'
   // -40% from the bottom means the trigger is 40% up from the bottom
@@ -127,5 +139,6 @@ const divB = document.querySelector('#landscape').offsetHeight;
 const divC = document.querySelector('#square').offsetHeight;
 const divD = document.querySelector('#square').offsetHeight;
 const target = document.querySelector('.torn-paper-div');
+
 
 target.style.height = (divA + divB + divC + divD) + 'px';
