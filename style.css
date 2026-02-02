@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
     /* Prevents layout breaking from padding/borders */
+    -webkit-tap-highlight-color: transparent; /* This line */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* For older browsers */
 }
 
 body {
@@ -342,9 +344,6 @@ body.dark {
     transform: scale(0.4);
     position: relative;
     right: -10%;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    /* For older browsers */
     animation: fadeIn 3s ease-in forwards;
 }
 
@@ -1135,8 +1134,6 @@ body.dark {
     /* FIX: Ensure the mouse knows this is an interactive element */
     cursor: pointer;
     pointer-events: all;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);/* For older browsers */
 }
 
 #leftArrow {
