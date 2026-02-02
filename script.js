@@ -1,33 +1,31 @@
-//Preview Script
-// Select elements
 const overlay = document.getElementById('previewOverlay');
 const previewImg = document.getElementById('previewImg');
 const closeBtn = document.getElementById('closeBtn');
-const galleryImages = document.querySelectorAll('.sec img');
+// Target images with .sec img OR .workIMG
+const galleryImages = document.querySelectorAll('.sec img, .workIMG');
 
 // Open Preview
 galleryImages.forEach(img => {
   img.addEventListener('click', () => {
-    previewImg.src = img.src; // Take the source of the clicked image
-    overlay.style.display = 'flex'; // Show the overlay
-    document.body.style.overflow = 'hidden'; // Stop the background from scrolling
+    previewImg.src = img.src; 
+    overlay.classList.add('show'); // Trigger CSS transitions
+    document.body.style.overflow = 'hidden'; 
     if ("vibrate" in navigator) {
-      navigator.vibrate(70); // Quick 60ms vibration
+      navigator.vibrate(70); 
     }
   });
 });
 
 // Close Preview Function
 const closePreview = () => {
-  overlay.style.display = 'none';
-  previewImg.src = ""; // Clear the image source
-  document.body.style.overflow = 'auto'; // Allow scrolling again
+  overlay.classList.remove('show'); // Reverse CSS transitions
+  document.body.style.overflow = 'auto';
+  // Optional: Clear src after animation finishes (400ms)
+  setTimeout(() => { previewImg.src = ""; }, 400);
 };
 
-// Event Listeners for closing
 closeBtn.addEventListener('click', closePreview);
 
-// Close when clicking the black background (not the image)
 overlay.addEventListener('click', (e) => {
   if (e.target === overlay) {
     closePreview();
