@@ -69,7 +69,8 @@ document.querySelectorAll('.reveal-on-scroll').forEach((el) => observer.observe(
 function handleButtonClick() {
   // 1. Check if the browser supports vibration
   if ("vibrate" in navigator) {
-    navigator.vibrate(70); // Quick 60ms vibration
+    // This pattern creates the "elastic" click sensation
+    navigator.vibrate([15, 30, 10]); 
   }
 }
 
@@ -173,6 +174,7 @@ const divB = document.querySelector('#landscape').offsetHeight;
 const divC = document.querySelector('#square').offsetHeight;
 const divD = document.querySelector('#square').offsetHeight;
 const target = document.querySelector('.torn-paper-div');
+
 
 
 target.style.height = (divA + divB + divC + divD) + 'px';
